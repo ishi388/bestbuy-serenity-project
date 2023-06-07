@@ -5,7 +5,7 @@ import com.bestbuy.utils.PropertyReader;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 
-public class TestBase {
+public class ProductTestBase {
 
     public static PropertyReader propertyReader;
 
@@ -15,6 +15,6 @@ public class TestBase {
         RestAssured.baseURI = propertyReader.getProperty("baseUrl");
         RestAssured.port = Integer.parseInt(propertyReader.getProperty("port"));
         RestAssured.basePath = Path.PRODUCT;
-        RestAssured.basePath = Path.STORE;
+
     }
 }
